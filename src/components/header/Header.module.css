@@ -1,22 +1,12 @@
 
 
 header {
-    margin-top: 1rem;
+    margin: 1rem 0;
     position: relative;
     background-color: var(--background);
     width: 100%;
 }
 
-/* header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); 
-    width: 1000px;
-    height: 1px;
-    background-color: var(--foreground);
-} */
 nav ul {
     display: flex;
     justify-content: end;
@@ -34,14 +24,14 @@ nav li {
     cursor: pointer;
 }
 nav li:hover {
-        background-color: #e5e7eb;
+        background-color: yellow;
 }
 
 .toggle-btn {
     margin-left: 1rem;
     width: 45px;
     height: 23px;
-    background-color: #111;
+    background-color: var(--color-dark);;
     display: flex;
     border-radius: 50px;
     align-items: center;
@@ -67,14 +57,30 @@ nav li:hover {
     transform: translateX(22px);
 }
 
-button {
+.resume-btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: .1rem .2rem;
+    border: none;
+    outline: none;
 }
 
-button:hover {
-    background-color: #e5e7eb;
+.resume-btn:hover {
+    /* background-color: #e5e7eb; */
     border-radius: 5px;
+}
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .menu {
+        display: block;
+        margin-left: 2rem;
+    }
+    nav {
+        display: none;
+    }
 }
