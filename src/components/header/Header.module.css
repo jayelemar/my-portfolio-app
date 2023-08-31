@@ -1,10 +1,13 @@
+
+
 header {
+    margin-top: 1rem;
     position: relative;
     background-color: var(--background);
     width: 100%;
 }
 
-header::after {
+/* header::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -13,18 +16,29 @@ header::after {
     width: 1000px;
     height: 1px;
     background-color: var(--foreground);
+} */
+nav ul {
+    display: flex;
+    justify-content: end;
 }
-
 nav a {
     color: var(--foreground);
 }
 
 nav li {
+    padding: .4rem 1.3rem;
+    border-radius: 5px;
+    font-size: 1.4rem;
     list-style: none;
     margin: 0 10px;
+    cursor: pointer;
+}
+nav li:hover {
+        background-color: #e5e7eb;
 }
 
 .toggle-btn {
+    margin-left: 1rem;
     width: 45px;
     height: 23px;
     background-color: #111;
@@ -34,7 +48,7 @@ nav li {
     justify-content: space-between;
     padding: 5px;
     position: relative;
-    transform: scale(1.5);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -51,4 +65,16 @@ nav li {
 
 .move {
     transform: translateX(22px);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: .1rem .2rem;
+}
+
+button:hover {
+    background-color: #e5e7eb;
+    border-radius: 5px;
 }

@@ -1,5 +1,5 @@
 .main {
-    background-color: skyblue;
+    /* background-color: skyblue; */
     height: 400px;
-    background-color: var(--color-primary);
+    /* background-color: var(--color-primary); */
 }
