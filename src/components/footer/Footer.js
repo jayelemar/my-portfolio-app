@@ -1,10 +1,11 @@
 import React from 'react'
+import './Footer.module.scss'
 
 const Footer = () => {
   return (
-    <div>
-        <h4>Footer.js</h4>
-    </div>
+    <footer className='--flex-center'>
+        <p>&copy; 2023 Jay Elemar Termulo - All Rights Reserved</p>
+    </footer>
   )
 }
 

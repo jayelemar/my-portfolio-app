@@ -1,7 +1,8 @@
 
 
 header {
-    margin: 1rem 0;
+    margin: 0;
+    padding: .6rem 0;
     position: relative;
     background-color: var(--background);
     width: 100%;
@@ -25,18 +26,18 @@ nav li {
 }
 
 nav li:hover {
-    background-color: #bfbfbf;
-    color: white;
+    background-color: gray;
+    color: var(--background);
 }
 
 nav li:nth-child(4) {
-    border: 1px solid black;
+    border: 1px solid var(--foreground);
 }
 
 nav li:nth-child(4):hover {
-    color: white;
-    background-color: var(--color-dark);
-    border: 1px solid var(--color-dark);
+    color: var(--background);
+    background-color: var(--foreground);
+    border: 1px solid var(--foreground);
 }
 
 nav li:nth-child(5):hover {
@@ -48,7 +49,7 @@ nav li:nth-child(5):hover {
     margin-left: 1rem;
     width: 45px;
     height: 23px;
-    background-color: var(--color-dark);;
+    background-color: var(--foreground);;
     display: flex;
     border-radius: 50px;
     align-items: center;
@@ -62,7 +63,7 @@ nav li:nth-child(5):hover {
 .ball {
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background-color: var(--background);
     position: absolute;
     top: 1px;
     left: 2px;
