@@ -22,34 +22,45 @@ h3 {
 }
 
 .btn {
+    color: var(--foreground);
     margin-right:2rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: .3rem 1.2rem;
+    transition: all .3s ease;
 }
 
 .btn:hover {
-    background-color: yellow;
+    background-color: #fdd000;
+    color: var(--color-dark);
     border-radius: 5px;
-    /* color: white; */
 }
 
 .icon {
+    color: var(--foreground);
     cursor: pointer;
     margin: 7rem 4rem 7rem 2rem;
     padding: .3rem;
     border-radius: 5px;
+    transition: all .3s ease;
 }
 
-.icon:hover {
+.icon:hover{
     color: var(--background);
     background-color: var(--foreground);
 }
 
 .icon-wrapper {
     display: flex;
+}
+
+.tooltip {
+    background-color: rgb(218, 218, 218);
+    color: var(--color-dark);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -73,7 +84,7 @@ h3 {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .main {
         height: 520px;
     }

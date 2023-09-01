@@ -12,11 +12,10 @@ nav ul {
     display: flex;
     justify-content: end;
 }
-nav a {
-    color: var(--foreground);
-}
 
 nav li {
+    color: var(--foreground);
+    transition: all .2s ease;
     padding: .4rem 1.3rem;
     border-radius: 5px;
     font-size: 1.4rem;
@@ -26,8 +25,8 @@ nav li {
 }
 
 nav li:hover {
-    background-color: gray;
-    color: var(--background);
+    background-color: rgb(218, 218, 218);
+    color: var(--color-dark);
 }
 
 nav li:nth-child(4) {
@@ -78,6 +77,8 @@ nav li:nth-child(5):hover {
 .menu {
     display: none;
 }
+
+
 
 @media screen and (max-width: 720px) {
     .menu {

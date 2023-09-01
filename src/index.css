@@ -30,7 +30,7 @@
   --color-white: #f5f5fa;
   --color-dark: #17171f;
 
-  --color-grey: #grey;
+  --color-grey: grey;
   --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
   --color-purple: #9d0191;
@@ -39,8 +39,8 @@
   --color-primary: #007bff;
   --color-success: #28a745;
 
-  --background: var(--color-dark)
-  --foreground: var(var(var(--color-white)))
+  --background: var(--color-dark);
+  --foreground: var(--color-white);
 }
 
 * {
@@ -53,7 +53,7 @@
 
 html {
   font-size: 10px;
-  background-color: var(--background);
+  background-color: white;
 }
 
 body {
