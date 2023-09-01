@@ -20,7 +20,7 @@ const Main = () => {
                 className={styles.icon} 
                 data-tooltip-id="linkedin-tooltip" 
                 data-tooltip-content="Linkedin Profile" />
-            <Tooltip id="linkedin-tooltip" place="top" className={styles.tooltip} /> 
+            <Tooltip id="linkedin-tooltip" place="top" className={styles.tooltip}/> 
             
           </span>
           <div>
