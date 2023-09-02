@@ -36,11 +36,9 @@ nav li:hover {
 .resume {
     color: var(--foreground);
     background-color: var(--background);
-    transition: all .2s ease;
     padding: .4rem 1.3rem;
     border-radius: 5px;
     font-size: 1.4rem;
-    list-style: none;
     margin: 0 10px;
     cursor: pointer;
     border: none;
@@ -67,10 +65,12 @@ button:hover {
 
 
 .toggle-btn {
+    position: relative;
     margin-left: 1rem;
-    width: 45px;
+    width: 50px;
     height: 23px;
-    background-color: var(--foreground);
+    background-color: var(--background);
+    border: 1px solid var(--foreground);
     display: flex;
     border-radius: 50px;
     align-items: center;
@@ -83,17 +83,17 @@ button:hover {
 
 .ball {
     width: 20px;
-    height: 20px;
-    background-color: var(--background);
-    position: absolute;
-    top: 1px;
-    left: 2px;
+    height: 18px;
     border-radius: 50%;
-    transition: all .2s linear;
+    background-color: grey;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.2s linear;
 }
 
 .move {
-    transform: translateX(22px);
+    transform: translateX(25px);
 }
 
 .menu {
@@ -125,8 +125,7 @@ button:hover {
         display: block;
         margin-left: 2rem;
         color: var(--foreground);
-        border: 2px solid var(--foreground);
-        /* font-size: 6rem; */
+        border: 1px solid var(--foreground);
         border-radius: 7px;
     }
 
@@ -136,12 +135,11 @@ button:hover {
 
     .mobileMenuOpen .resume {
         justify-content: center;
-        color: var(--foreground);
-        background-color: var(--background);
-        transition: all .2s ease;
+        color: var(--color-white);
+        background-color: var(--color-primary);
         border-radius: 5px;
         cursor: pointer;
-        border: none;
+        border: 1px solid var(--background);
         outline: none;
         font-size: 2rem;
         width: 100%;
@@ -150,7 +148,7 @@ button:hover {
         padding: 1rem 0;
     }
     .resume:hover {
-        background-color: rgb(218, 218, 218);
+        background-color: yellow;
         color: var(--color-dark);
     }
 
@@ -171,7 +169,6 @@ button:hover {
 
     .mobileMenuOpen nav ul {
         height: 100%;
-        /* width: 80%; */
         display: flex;
         margin: auto 2rem;
         flex-direction: column;
@@ -183,7 +180,6 @@ button:hover {
         font-size: 2rem;
         width: 100%;
         display: block;
-        /* margin: 1rem; */
         padding: 1rem 0;
         border: none;
     }
@@ -191,35 +187,16 @@ button:hover {
 
 
     .mobileMenuOpen .close-btn {
-        /* display: block; */
         z-index: 3;
         cursor: pointer;
 
     }
 
-    .navbar li:nth-child(4) {
-        background-color: transparent;
-        cursor: none;
-    }
+
 
     .mobileMenuOpen .toggle-btn {
-        /* display: flex; */
         position: absolute;
         top: 1.5rem;
         right: 7rem;
     }
-
-    nav li:nth-child(5) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 0;
-        width: 0;
-    }
-
-    nav li:hover:nth-child(6):hover {
-        background-color: none;
-        color: none;
-    }
-
 }
