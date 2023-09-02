@@ -1,10 +1,12 @@
 import React from 'react'
+import styles from './Project.module.scss'
 
 const Project = () => {
   return (
-    <div>
-        <h1>Project.js</h1>
-    </div>
+    <section className={styles.project}>
+        <h3>Projects</h3>
+        {/* <hr /> */}
+    </section>
   )
 }
 

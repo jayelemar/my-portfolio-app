@@ -1,6 +1,3 @@
-/* *{
-    outline: 1px solid red;
-} */
 
 .main {
     height: 510px;
@@ -9,58 +6,37 @@
 
 .main-text {
     position: relative;
-    /* bottom: 40px; */
 }
 
 h1 {
     margin-top: 0;
     font-size: 6rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--background);
 }
 
 h3 {
     margin: 1.5rem 0 ;
     font-size: 2.8rem;
     font-weight: 400;
-    color: #000;
+    color: var(--foreground);
 }
 
 .btn {
+    color: var(--foreground);
     margin-right:2rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: .3rem 1.2rem;
+    transition: all .3s ease;
 }
 
 .btn:hover {
-    background-color: yellow;
+    background-color: #fdd000;
+    color: var(--color-dark);
     border-radius: 5px;
-    /* color: white; */
-}
-
-.icon {
-    cursor: pointer;
-    margin: 7rem 4rem 7rem 2rem;
-    padding: .3rem;
-    border-radius: 5px;
-}
-
-.icon:hover {
-    color: var(--color-primary);
-    background-color: black;
-}
-
-.icon-wrapper {
-    display: flex;
-}
-
-@media screen and (max-width: 800px) {
-    .icon {
-        margin: 5.5rem 4rem 5.5rem 2rem;
-    }
 }
 
 @media screen and (max-width: 625px) {
@@ -72,13 +48,8 @@ h3 {
         font-size: 2.5rem;
     }
 }
-@media screen and (max-width: 520px) {
-    .icon {
-        margin: 3.8rem 4rem 3.8rem 2rem;
-    }
-}
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 530px) {
     .main {
         height: 520px;
     }
