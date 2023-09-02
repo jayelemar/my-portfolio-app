@@ -1,10 +1,11 @@
 import React from 'react'
+import styles from './About.module.scss'
 
 const About = () => {
   return (
-    <div>
-        <h1>About.js</h1>
-    </div>
+    <section>
+        <h2>About.js</h2>
+    </section>
   )
 }
 

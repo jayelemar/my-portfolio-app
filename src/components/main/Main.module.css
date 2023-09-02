@@ -1,3 +1,4 @@
+
 .main {
     height: 510px;
     background-color: var(--color-primary);
@@ -38,37 +39,6 @@ h3 {
     border-radius: 5px;
 }
 
-.icon {
-    color: var(--foreground);
-    cursor: pointer;
-    margin: 7rem 4rem 7rem 2rem;
-    padding: .3rem;
-    border-radius: 5px;
-    transition: all .3s ease;
-}
-
-.icon:hover{
-    color: var(--background);
-    background-color: var(--foreground);
-}
-
-.icon-wrapper {
-    display: flex;
-}
-
-.tooltip {
-    background-color: rgb(218, 218, 218);
-    color: var(--color-dark);
-    font-family: "Poppins", sans-serif;
-    font-size: 1.3rem;
-}
-
-@media screen and (max-width: 800px) {
-    .icon {
-        margin: 5.5rem 4rem 5.5rem 2rem;
-    }
-}
-
 @media screen and (max-width: 625px) {
 
     h1 {
@@ -78,13 +48,8 @@ h3 {
         font-size: 2.5rem;
     }
 }
-@media screen and (max-width: 520px) {
-    .icon {
-        margin: 3.8rem 4rem 3.8rem 2rem;
-    }
-}
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 530px) {
     .main {
         height: 520px;
     }
