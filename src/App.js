@@ -4,13 +4,15 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import useLocalStorage from 'use-local-storage';
 import Project from './components/project/Project';
-// import About from './components/about/About';
-// import Contact from './components/contact/Contact';
-import { useState } from 'react';
+import About from './components/about/About';
+import Contact from './components/contact/Contact';
+import { useRef, useState } from 'react';
 
 function App() {
   const [theme, setTheme] = useLocalStorage("theme", "light");
   const [switchBtn, setSwitchBtn] = useState(false);
+  const projectRef = useRef(null);
+
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light"
@@ -19,14 +21,23 @@ function App() {
     document.documentElement.setAttribute("data-theme", newTheme);
   };
 
- 
+  const scrollToProject = () => {
+    projectRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
 
 
   return (
     <div className='main'>
-    <Header myTheme={theme} onToggleTheme={toggleTheme} onSwitch={switchBtn}/>
+    <Header myTheme={theme} 
+        onToggleTheme={toggleTheme} 
+        onSwitch={switchBtn}  
+        scrollToProject={scrollToProject} />
     <Main />
-    <Project/>
+    <About />
+    <Contact />
+    <Project ref={projectRef}/>
 
     <Footer/>
     </div>

@@ -7,7 +7,7 @@ import { RiSunFoggyFill, RiMenuFill } from 'react-icons/ri';
 import { AiOutlineClose } from 'react-icons/ai'
 
 
-const Header = ({ myTheme, onToggleTheme, onSwitch }) => {
+const Header = ({ myTheme, onToggleTheme, onSwitch, scrollToProject }) => {
   const logoSource = myTheme === 'light' ? logo : logoDark;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,6 +15,7 @@ const Header = ({ myTheme, onToggleTheme, onSwitch }) => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+ 
   return (
     <header data-theme={myTheme}>
       <div className={`--flex-between ${styles.box}`}  >
@@ -23,7 +24,7 @@ const Header = ({ myTheme, onToggleTheme, onSwitch }) => {
           <div>
           <nav>
             <ul className='--flex-between'>
-              <li>Project</li>
+              <li onClick={scrollToProject}>Project</li>
               <li>About</li>
               <li>Contact</li>
               <button className={styles.resume}>Resume {!isMobileMenuOpen ? <BsBoxArrowUpRight size={11}/> : null }</button>
