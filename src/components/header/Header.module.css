@@ -1,6 +1,7 @@
 
 
 header {
+
     margin: 0;
     padding: .6rem 0;
     background-color: var(--background);
@@ -36,7 +37,7 @@ nav li:hover {
 .resume {
     color: var(--foreground);
     background-color: var(--background);
-    transition: all .2s ease;
+    /* transition: all .2s ease; */
     padding: .4rem 1.3rem;
     border-radius: 5px;
     font-size: 1.4rem;
@@ -68,7 +69,7 @@ button:hover {
 
 .toggle-btn {
     margin-left: 1rem;
-    width: 45px;
+    width: 50px;
     height: 23px;
     background-color: var(--foreground);
     display: flex;
@@ -93,7 +94,7 @@ button:hover {
 }
 
 .move {
-    transform: translateX(22px);
+    transform: translateX(25px);
 }
 
 .menu {
@@ -122,6 +123,9 @@ button:hover {
 
     .close{
         z-index: 4;
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
         display: block;
         margin-left: 2rem;
         color: var(--foreground);
@@ -137,8 +141,8 @@ button:hover {
     .mobileMenuOpen .resume {
         justify-content: center;
         color: var(--foreground);
-        background-color: var(--background);
-        transition: all .2s ease;
+        background-color: var(--color-primary);
+        /* transition: all .2s ease; */
         border-radius: 5px;
         cursor: pointer;
         border: none;
@@ -156,7 +160,7 @@ button:hover {
 
     .mobileMenuOpen nav {
         z-index: 3;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         display: block;
@@ -205,7 +209,7 @@ button:hover {
     .mobileMenuOpen .toggle-btn {
         /* display: flex; */
         position: absolute;
-        top: 1.5rem;
+        top: 1.9rem;
         right: 7rem;
     }
 
