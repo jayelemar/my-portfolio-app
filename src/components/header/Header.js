@@ -17,7 +17,7 @@ const Header = ({ myTheme, onToggleTheme, onSwitch }) => {
 
   return (
     <header data-theme={myTheme}>
-      <div className='container --flex-between'>
+      <div className={`--flex-between ${styles.box}`}  >
         <img src={logoSource} alt='logo' width={150} />
         <div className={`--flex-between ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
           <div>
