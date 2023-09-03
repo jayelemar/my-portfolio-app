@@ -6,7 +6,8 @@ import { BsFillMoonStarsFill, BsBoxArrowUpRight, BsGithub, BsLinkedin } from 're
 import { RiSunFoggyFill, RiMenuFill } from 'react-icons/ri';
 import { AiOutlineClose } from 'react-icons/ai'
 
-const Header = ({ myTheme, onToggleTheme }) => {
+
+const Header = ({ myTheme, onToggleTheme, onSwitch }) => {
   const logoSource = myTheme === 'light' ? logo : logoDark;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -16,7 +17,7 @@ const Header = ({ myTheme, onToggleTheme }) => {
 
   return (
     <header data-theme={myTheme}>
-      <div className='container --flex-between'>
+      <div className={`--flex-between ${styles.box}`}  >
         <img src={logoSource} alt='logo' width={150} />
         <div className={`--flex-between ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
           <div>
@@ -26,11 +27,11 @@ const Header = ({ myTheme, onToggleTheme }) => {
               <li>About</li>
               <li>Contact</li>
               <button className={styles.resume}>Resume {!isMobileMenuOpen ? <BsBoxArrowUpRight size={11}/> : null }</button>
-                <span className={styles['toggle-btn']} onClick={onToggleTheme} >
-                  <BsFillMoonStarsFill color='pink' size={16} />
+                <div className={styles['toggle-btn']} onClick={onToggleTheme} >
+                  <BsFillMoonStarsFill color='violet' size={14} />
                   <RiSunFoggyFill color='yellow' size={16} />
-                  <div className='ball'></div>
-                </span>
+                  <div className={onSwitch ? `${styles['ball']} ${styles['move']}` : styles['ball']}></div>
+                </div>
               { isMobileMenuOpen ? 
                   <div className={styles['header-icons']}>
                       <BsGithub
@@ -42,12 +43,19 @@ const Header = ({ myTheme, onToggleTheme }) => {
                           className={styles.icon}
                       />
                   </div> : null }
+
+
+
             </ul>   
           </nav>
           </div>
-          {isMobileMenuOpen ? <AiOutlineClose size={30}  className={styles.close} onClick={toggleMobileMenu} /> :
-          <RiMenuFill size={40} className={styles['menu']} onClick={toggleMobileMenu} />}
-          <div className={styles.wrapper} style={isMobileMenuOpen ? { width: '100vw' } : { window: '0'}} onClick={toggleMobileMenu}></div>
+          {isMobileMenuOpen ? 
+              <AiOutlineClose size={30}  className={styles.close} onClick={toggleMobileMenu} /> 
+              :
+              <RiMenuFill size={40} className={styles['menu']} onClick={toggleMobileMenu} />
+          }
+          <div className={styles.wrapper} style={isMobileMenuOpen ? { width: '100vw' } : { window: '0'}} onClick={toggleMobileMenu}>
+          </div>
         </div>
       </div>
     </header>
