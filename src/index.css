@@ -19,7 +19,7 @@
   --color-orange: #ff7722;
 
   --color-dark-grey: #222831;
-  --color-grey: grey;
+  --color-grey: rgba(128, 128, 128, 0.305);
 
   --color-dark-blue: #0a1930;
   --color-blue: #007bff;
@@ -37,7 +37,7 @@
     --color-light: #f5f5fa;
 	--color-dark: #17171f;
 
-  --color-primary:var(--color-grey);
+  --color-primary:var(--color-dark);
     --color-success: #28a745;
     --color-warning: #f2b809;
     --color-danger: #dc3545;

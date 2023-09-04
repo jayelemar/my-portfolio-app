@@ -2,6 +2,8 @@ import React, { forwardRef } from 'react'
 import styles from './Main.module.css'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import Icons from '../icons/Icons'
+import ImageGIF from '../../assets/coder.gif'
+import OpenToWork from '../../assets/open-to-work.gif'
 
 
 const Main = ( props, homeRef ) => {
@@ -17,8 +19,11 @@ const Main = ( props, homeRef ) => {
             <button className={styles.btn}>View resume <BsBoxArrowUpRight size={11}/></button>
           </div>
         </div>
-        <div className={styles['main-img']}></div>
       </div>
+      <figure className={styles['image-gif']}>
+          <img  src={ImageGIF} alt="coder-gif" width={350} className={styles.coder}/>
+          <img  src={OpenToWork} alt="open-to-work-gif" width={350} className={styles['open-to-work']}/>
+      </figure>
     </section>
   )
 }
