@@ -17,8 +17,12 @@ header {
     margin: 0 auto;
     padding: .6rem 20px;
     background-color: var(--background);
-    border-bottom: 1px solid #fff;
-  }
+    border-bottom: 2px solid #fff;
+}
+
+.box img {
+    cursor: pointer;
+}
 
 nav {
     display: flex;

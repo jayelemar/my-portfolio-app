@@ -1,12 +1,16 @@
-import React from 'react'
-import styles from './About.module.scss'
+import React, { forwardRef } from 'react'
+import styles from './About.module.css'
 
-const About = () => {
+const About = (props, aboutRef) => {
   return (
-    <section>
-        <h2>About.js</h2>
+    <section 
+        className={styles.about} 
+        ref={aboutRef} 
+        id='about-section'
+    >
+        <h3>About me</h3>
     </section>
   )
 }
 
-export default About
+export default forwardRef(About);

@@ -12,6 +12,10 @@ function App() {
   const [theme, setTheme] = useLocalStorage("theme", "light");
   const [switchBtn, setSwitchBtn] = useState(false);
   const projectRef = useRef(null);
+  const aboutRef = useRef(null);
+  const homeRef = useRef(null);
+  const contactRef = useRef(null);
+  
 
 
   const toggleTheme = () => {
@@ -25,6 +29,18 @@ function App() {
     projectRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToAbout = () => {
+    aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToHome = () => {
+    homeRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
 
 
 
@@ -33,13 +49,16 @@ function App() {
     <Header myTheme={theme} 
         onToggleTheme={toggleTheme} 
         onSwitch={switchBtn}  
-        scrollToProject={scrollToProject} />
-    <Main />
-    <About />
-    <Contact />
+        scrollToHome={scrollToHome}
+        scrollToProject={scrollToProject}
+        scrollToAbout={scrollToAbout}
+        scrollToContact={scrollToContact}
+    />
+    <Main ref={homeRef}/>
     <Project ref={projectRef}/>
-
-    <Footer/>
+    <About ref={aboutRef} />
+    <Contact ref={contactRef}/>
+    <Footer />
     </div>
   );
 }
