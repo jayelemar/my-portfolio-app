@@ -1,13 +1,17 @@
-import React from 'react'
-import styles from './Project.module.scss'
+import React, { forwardRef } from 'react'
+import styles from './Project.module.css'
 
-const Project = () => {
+const Project =  (props, projectRef) => {
+
   return (
-    <section className={styles.project}>
+    <section className={styles.project} ref={projectRef} id="project-section" >
         <h3>Projects</h3>
-        {/* <hr /> */}
+        <article>
+          <div className=""></div>
+          <figure></figure>
+        </article>
     </section>
   )
 }
 
-export default Project
+export default forwardRef(Project);

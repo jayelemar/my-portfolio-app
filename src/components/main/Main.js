@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styles from './Main.module.css'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import Icons from '../icons/Icons'
 
 
-const Main = () => {
+const Main = ( props, homeRef ) => {
   return (
-    <section className={styles.main}>
+    <section className={styles.main} ref={homeRef} id='home-section'>
       <div className="container">
         <div className={styles['main-text']}>
           <h1>Hi, I’m Jay Elemar.</h1>
@@ -23,4 +23,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default forwardRef(Main);

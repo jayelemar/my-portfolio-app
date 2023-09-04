@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
+import styles from './Contact.module.css'
 
-const Contact = () => {
+const Contact = ( props, contactRef ) => {
   return (
-    <div>
-        <h1>Contact.js</h1>
-    </div>
+    <section className={styles.contact} ref={contactRef} id="project-section" >
+        <h3>Contact me</h3>
+    </section>
   )
 }
 
-export default Contact
+export default forwardRef(Contact);
