@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react'
 import styles from './Project.module.scss'
 
-const Project = forwardRef( (props, projectRef) => {
+const Project =  (props, projectRef) => {
 
   return (
-    <section className={styles.project} ref={projectRef} id="project-section">
+    <section className={styles.project} ref={projectRef} id="project-section" >
         <h3>Project Section</h3>
         <article>
           <div className=""></div>
@@ -25,6 +25,6 @@ const Project = forwardRef( (props, projectRef) => {
 
     </section>
   )
-})
+}
 
-export default Project;
+export default forwardRef(Project);

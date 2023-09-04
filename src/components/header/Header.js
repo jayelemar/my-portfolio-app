@@ -15,7 +15,6 @@ const Header = ({ myTheme, onToggleTheme, onSwitch, scrollToProject }) => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
- 
   return (
     <header data-theme={myTheme}>
       <div className={`--flex-between ${styles.box}`}  >
@@ -44,9 +43,6 @@ const Header = ({ myTheme, onToggleTheme, onSwitch, scrollToProject }) => {
                           className={styles.icon}
                       />
                   </div> : null }
-
-
-
             </ul>   
           </nav>
           </div>
